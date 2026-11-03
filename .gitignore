@@ -1,1 +1,10 @@
 .env
+
+
+# Ignorar logs de Airflow dentro de dockerfiles
+dockerfiles/airflow/logs/*
+!dockerfiles/airflow/logs/.gitkeep
+
+# O ignorar cualquier carpeta logs en el proyecto
+**/logs/*
+!**/logs/.gitkeep
