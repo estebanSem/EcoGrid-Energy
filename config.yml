@@ -1,0 +1,7 @@
+kafka:
+  topic_name: 'raw-energy-data'
+  bootstrap_server: 'kafka:29092'
+
+api:
+  indicador: '1001'
+  
