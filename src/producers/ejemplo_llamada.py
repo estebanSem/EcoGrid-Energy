@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 TOKEN = "16a3f791c283be6e990fabaf3efc84b6f5027861aa0fa3eb1194ee03ee250644"
 
 # Indicador 1001: Generación por tecnología en tiempo real
-INDICATOR_ID = "10211"
+INDICATOR_ID = "10229"
 
 # Ventana de tiempo: Últimas 24 horas
 now = datetime.now(timezone.utc)
@@ -45,6 +45,8 @@ if response.status_code == 200:
         print("\nEjemplo de datos recibidos:")
         for v in values[:3]:
             print(f" - [{v.get('datetime')}] {v.get('title')}: {v.get('value')} MW")
+
+    print(data)
 else:
     print("❌ Error de respuesta:")
     print(response.text)
