@@ -1,0 +1,50 @@
+kafka:
+  topic_name: 'raw-energy-data'
+  bootstrap_server: 'kafka:29092'
+
+# Configuración de indicadores para el Pipeline EcoGrid (eSIOS / REE)
+
+esios:
+  # Indicadores de Generación en Tiempo Real (MW)
+  generation:
+    - id: 546
+      name: "Hidráulica"
+      category: "renewable"
+      co2_factor_g_kwh: 0
+    - id: 547
+      name: "Nuclear"
+      category: "clean"
+      co2_factor_g_kwh: 0
+    - id: 548
+      name: "Eólica"
+      category: "renewable"
+      co2_factor_g_kwh: 0
+    - id: 549
+      name: "Solar Fotovoltaica"
+      category: "renewable"
+      co2_factor_g_kwh: 0
+    - id: 550
+      name: "Solar Térmica"
+      category: "renewable"
+      co2_factor_g_kwh: 0
+    - id: 551
+      name: "Ciclo Combinado"
+      category: "fossil"
+      co2_factor_g_kwh: 370
+    - id: 553
+      name: "Carbón"
+      category: "fossil"
+      co2_factor_g_kwh: 820
+    - id: 554
+      name: "Cogeneración"
+      category: "fossil"
+      co2_factor_g_kwh: 300
+
+  # Indicadores de Mercado y Economía
+  market:
+    - id: 10211
+      name: "Precio PVPC"
+      unit: "EUR/MWh"
+    - id: 1293
+      name: "Demanda Real Peninsular"
+      unit: "MW"
