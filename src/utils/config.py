@@ -18,13 +18,18 @@ def load_indicators_config(path: Path = CONFIG_PATH) -> dict:
     return yaml.safe_load(f)
 
 def get_kafka_config(path: Path = CONFIG_PATH) -> dict:
-    """
-        Obtiene la configuracion de kafka desde el archivo de configuracion
-    """
-    config = load_indicators_config(path)
-    list = config.get("kafka", [])
+  """Devuelve la configuracion de Kafka
 
-    return list
+    Args:
+        path (Path, optional): ruta del archivo de config. Defaults to CONFIG_PATH.
+
+    Returns:
+        dict: _description_
+  """
+  config = load_indicators_config(path)
+  list = config.get("kafka", [])
+
+  return list
 
 
 def get_indicators_map(path: Path = CONFIG_PATH) -> dict:

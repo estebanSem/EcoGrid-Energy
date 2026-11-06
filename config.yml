@@ -1,6 +1,7 @@
 kafka:
   topic_name: 'raw-energy-data'
   bootstrap_server: 'kafka:29092'
+  schema_registry : 'http://schema-registry:8081'
 
 # Configuración de indicadores para el Pipeline EcoGrid (eSIOS / REE)
 

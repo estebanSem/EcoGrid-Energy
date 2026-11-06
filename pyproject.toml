@@ -1,0 +1,22 @@
+[project]
+name = "ecogrid-energy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Esteban Sempere", email = "90720500+estebanSem@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "avro>=1.12.2",
+    "confluent-kafka>=2.16.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+ecogrid-energy = "ecogrid_energy:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"

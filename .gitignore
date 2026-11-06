@@ -1,4 +1,5 @@
 .env
+.venv/
 
 
 # Ignorar logs de Airflow dentro de dockerfiles

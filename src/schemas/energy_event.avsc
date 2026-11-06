@@ -1,0 +1,54 @@
+{
+  "type": "record",
+  "name": "EnergyGenerationEvent",
+  "namespace": "es.ecogrid.energy",
+  "doc": "Esquema Avro para eventos individuales de generación eléctrica por tecnología en tiempo real.",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Identificador único del evento (ej: ES_2026-11-06T10:00:00Z_Hidraulica)"
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "doc": "Marca temporal del dato proporcionado por la API (ISO-8601)"
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "default": "Península",
+      "doc": "Área geográfica de la medición"
+    },
+    {
+      "name": "indicator_id",
+      "type": "int",
+      "doc": "ID del indicador numérico en eSIOS (ej: 546)"
+    },
+    {
+      "name": "technology",
+      "type": "string",
+      "doc": "Nombre de la tecnología de generación (ej: Hidráulica, Eólica, Ciclo Combinado)"
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "doc": "Categoría de la fuente: renewable, clean, fossil, market"
+    },
+    {
+      "name": "generation_mw",
+      "type": "double",
+      "doc": "Potencia generada en Megavatios (MW)"
+    },
+    {
+      "name": "co2_factor_g_kwh",
+      "type": "double",
+      "doc": "Factor de emisión asociado en gCO2/kWh según configuración"
+    },
+    {
+      "name": "ingested_at",
+      "type": "string",
+      "doc": "Marca temporal UTC del momento de ingesta en el Producer (ISO-8601)"
+    }
+  ]
+}
